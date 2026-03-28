@@ -44,9 +44,10 @@ Click on the Console tab
 
 4️⃣ Paste the script
 
+```js
 (async () => {
-  const UNFOLLOW_LIMIT = 100;      // 🔴 recommended: 50–150
-  const FOLLOWER_WHITELIST = 7000; // 🔒 auto-whitelist
+  const UNFOLLOW_LIMIT = 100;
+  const FOLLOWER_WHITELIST = 7000;
   let unfollowedCount = 0;
 
   const sleep = (ms) => new Promise(r => setTimeout(r, ms));
@@ -82,8 +83,8 @@ Click on the Console tab
     confirmBtn && confirmBtn.click();
 
     unfollowedCount++;
-    console.log(`✅ Unfollowed (${unfollowedCount}/${UNFOLLOW_LIMIT})`);
-    await sleep(3500); // safety delay
+    console.log(`✅ Unfollowed (${unfollowedCount}/100)`);
+    await sleep(3500);
   };
 
   while (unfollowedCount < UNFOLLOW_LIMIT) {
@@ -97,23 +98,17 @@ Click on the Console tab
 
       const followerCount = getFollowerCount(card);
 
-      if (
-        !followsYou(card) &&
-        followerCount < FOLLOWER_WHITELIST
-      ) {
+      if (!followsYou(card) && followerCount < FOLLOWER_WHITELIST) {
         await unfollow(card);
       } else {
-        console.log(
-          `⏭️ Skipped — ${
-            followsYou(card) ? 'Follows you' : `${followerCount}+ followers`
-          }`
-        );
+        console.log(`⏭️ Skipped`);
       }
     }
   }
 
-  console.log(`🚀 DONE — ${unfollowedCount} accounts unfollowed safely`);
+  console.log(`🚀 DONE`);
 })();
+```
 
 
 Copy and paste the full script into the console and press:
