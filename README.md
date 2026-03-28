@@ -25,24 +25,27 @@ Their follower count
 Unfollows only eligible accounts
 Stops when limit is reached
 Logs progress in real-time
+
+
 📦 Setup Instructions
 1️⃣ Open X (Twitter) in your browser
-
 Go to:
-
 https://x.com
-
 Login to your account.
+
 
 2️⃣ Go to your Following page
 https://x.com/your_username/following
+
+
 3️⃣ Open Developer Console
 Windows/Linux: Ctrl + Shift + J
 Mac: Cmd + Option + J
 
 Click on the Console tab
 
-4️⃣ Paste the script
+
+4️⃣ copy this script
 
 ```js
 (async () => {
@@ -111,9 +114,11 @@ Click on the Console tab
 ```
 
 
-Copy and paste the full script into the console and press:
+paste the full script into the console and press:
 
 Enter
+
+
 🧠 Configuration
 
 You can adjust these values inside the script:
@@ -127,7 +132,9 @@ const FOLLOWER_WHITELIST = 7000;
 
 👉 Accounts with 7,000+ followers will NOT be unfollowed
 
-⏱️ Safety Mechanism
+
+
+⚠️⏱️ Safety Mechanism
 
 The script includes built-in delays:
 
@@ -146,6 +153,8 @@ You can stop anytime by:
 
 Refreshing the page, OR
 Closing the tab
+
+
 ⚠️ Important Disclaimer
 
 This script is provided for educational and personal use only.
@@ -156,6 +165,8 @@ You are responsible for any actions taken on your account
 Excessive automation may violate X (Twitter) platform rules
 The author assumes no liability for account restrictions, suspensions, or bans
 Use at your own risk
+
+
 💡 Recommended Usage
 
 To stay safe:
